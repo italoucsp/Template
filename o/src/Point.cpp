@@ -3,19 +3,19 @@
 
 using namespace std;
 
-template<class T, class I>
-double Point<T,I>::getx(){
+template<class T>
+double Point<T>::getx(){
     return x;
 }
-template<class T, class I>
-double Point<T,I>::gety(){
+template<class T>
+double Point<T>::gety(){
     return y;
 }
-template<class T, class I>
-void Point<T,I>::setx(T x){
+template<class T>
+void Point<T>::setx(T x){
     this->x = x;
 }
-template<class T, class I>
-void Point<T,I>::sety(T y){
+template<class T>
+void Point<T>::sety(T y){
     this->y = y;
 }

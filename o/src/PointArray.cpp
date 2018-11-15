@@ -5,12 +5,12 @@
 PointArray::PointArray()
 {
     this ->size = 0;
-    this ->points = new Point<>[size];
+    this ->points = new Point<int>[size];
 }
 
-PointArray::PointArray(const Point<> pts[],const int size){
+PointArray::PointArray(const Point<int> pts[],const int size){
     this->size = size;
-    this->points = new Point<>[size];
+    this->points = new Point<int>[size];
     for(int i=0;i<size;i++){
         points[i]=pts[i];
     }
@@ -18,7 +18,7 @@ PointArray::PointArray(const Point<> pts[],const int size){
 
 PointArray::PointArray(PointArray &o){
     this->size = o.size;
-    this->points = new Point<>[o.size];
+    this->points = new Point<int>[o.size];
     for(int i=0;i<size;i++){
         points[i]=o.points[i];
     }
@@ -40,7 +40,7 @@ void PointArray::print(){
     }
    }
 void PointArray::reSize(int newSize){
-    Point<> *pts = new Point<>[newSize];
+    Point<int> *pts = new Point<int>[newSize];
     int minisize = (newSize<size)?size:newSize;
     for(int i=0;i < minisize;i++){
         pts[i] = points[i];
@@ -50,13 +50,13 @@ void PointArray::reSize(int newSize){
     points = pts;
 }
 
-void PointArray::push_back(const Point<> &p){
+void PointArray::push_back(const Point<int> &p){
     reSize(size+1);
     points[size-1] = p;
 
 }
 
-void PointArray::insert(const int pos, const Point<> &p){
+void PointArray::insert(const int pos, const Point<int> &p){
     reSize(size+1);
     for(int i=size;i>=pos;i--){
         points[i]=points[i-1];

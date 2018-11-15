@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-template <typename T = double, typename I = int>
+template <typename T>
 class Point
 {
     public:
@@ -11,7 +11,7 @@ class Point
         Point(T, T);
         Point(Point &o);
 
-        void offset(I,I);
+        void offset(T,T);
         void print();
         double getx();
         double gety();
@@ -21,29 +21,29 @@ class Point
         T x,y;
 };
 
-template<class T, class I>
-Point<T,I>::Point()
+template<class T>
+Point<T>::Point()
 {
     x = 0;
     y = 0;
 }
-template<class T, class I>
-Point<T,I>::Point(T tx, T ty){
+template<class T>
+Point<T>::Point(T tx, T ty){
     x = tx;
     y = ty;
 }
-template<class T, class I>
-Point<T,I>::Point(Point &o){
+template<class T>
+Point<T>::Point(Point &o){
     x = o.x;
     y = o.y;
 }
-template<class T, class I>
-void Point<T,I>::offset(I nx,I ny){
+template<class T>
+void Point<T>::offset(T nx,T ny){
     x += nx;
     y += ny;
 }
-template<class T, class I>
-void Point<T,I>::print(){
+template<class T>
+void Point<T>::print(){
     cout << "(" << x << "," << y << ")" << endl;
 }
 
