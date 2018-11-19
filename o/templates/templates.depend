@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1542661739 source:e:\python\templates\main.cpp
+	<iostream>
+	"Point.h"
+	"PointArray.h"
+	<math.h>
+
+1542660570 e:\python\templates\include\point.h
+	<iostream>
+
+1542661252 e:\python\templates\include\pointarray.h
+	"Point.h"
+
+1542660570 source:e:\python\templates\src\point.cpp
+	"Point.h"
+	<iostream>
+
+1542661252 source:e:\python\templates\src\pointarray.cpp
+	"PointArray.h"
+	"Point.h"
+	<iostream>
+
